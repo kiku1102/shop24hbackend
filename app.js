@@ -2,6 +2,7 @@
 const express = require('express');
 const app = new express();
 const mongoose = require('mongoose');
+const port = 8000;
 const cors = require("cors");
 
 // Khai báo middleware đọc json
