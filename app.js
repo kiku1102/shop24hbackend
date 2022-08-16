@@ -2,7 +2,6 @@
 const express = require('express');
 const app = new express();
 const mongoose = require('mongoose');
-const port = 8000;
 const cors = require("cors");
 
 // Khai báo middleware đọc json
@@ -37,6 +36,4 @@ mongoose.connect("mongodb+srv://kiku:kiku1102@cluster0.mawmfxq.mongodb.net/?retr
 })
 
 
-app.listen(port, () => {
-    console.log(`App chạy trên cổng ${port} `)
-})
+app.listen(process.env.PORT || 8000)
